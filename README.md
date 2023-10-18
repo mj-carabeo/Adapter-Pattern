@@ -27,3 +27,5 @@ RefrigeratorAdapter - An adapter for plugging a refrigerator into a standard pow
 SmartphoneAdapter - An adapter for plugging a smartphone charger into a standard power outlet. It adapts the SmartphoneCharger to the PowerOutlet interface, translating plugIn() to chargePhone().
 
 Here is the link to my UML Class Diagram:
+
+https://lucid.app/lucidchart/4f41e07d-ede8-4122-bf79-46228f987110/edit?viewport_loc=110%2C-27%2C1707%2C769%2C0_0&invitationId=inv_211917bd-e124-436c-8e3d-e8d5d4babbdc
