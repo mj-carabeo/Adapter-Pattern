@@ -1,0 +1,60 @@
+interface PowerOutlet {
+    void plugIn();
+}
+
+class Laptop {
+    void charge() {
+        System.out.println("Laptop is charging...");
+    }
+}
+
+class Refrigerator {
+    void startCooling() {
+        System.out.println("Refrigerator is cooling...");
+    }
+}
+
+class SmartphoneCharger {
+    void chargePhone() {
+        System.out.println("Phone is charging...");
+    }
+}
+
+class LaptopAdapter implements PowerOutlet {
+    private Laptop laptop;
+
+    public LaptopAdapter(Laptop laptop) {
+        this.laptop = laptop;
+    }
+
+    @Override
+    public void plugIn() {
+        laptop.charge();
+    }
+}
+
+class RefrigeratorAdapter implements PowerOutlet {
+    private Refrigerator refrigerator;
+
+    public RefrigeratorAdapter(Refrigerator refrigerator) {
+        this.refrigerator = refrigerator;
+    }
+
+    @Override
+    public void plugIn() {
+        refrigerator.startCooling();
+    }
+}
+
+class SmartphoneAdapter implements PowerOutlet {
+    private SmartphoneCharger smartphoneCharger;
+
+    public SmartphoneAdapter(SmartphoneCharger smartphoneCharger) {
+        this.smartphoneCharger = smartphoneCharger;
+    }
+
+    @Override
+    public void plugIn() {
+        smartphoneCharger.chargePhone();
+    }
+}
