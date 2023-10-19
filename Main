@@ -2,14 +2,15 @@ public class Main {
     public static void main(String[] args) {
         Laptop laptop = new Laptop();
         Refrigerator refrigerator = new Refrigerator();
-        SmartphoneCharger smartphoneCharger = new SmartphoneCharger();
+        SmartphoneCharger charger = new SmartphoneCharger();
 
-        PowerOutlet laptopAdapter = new LaptopAdapter(laptop);
-        PowerOutlet refrigeratorAdapter = new RefrigeratorAdapter(refrigerator);
-        PowerOutlet smartphoneAdapter = new SmartphoneAdapter(smartphoneCharger);
+        PowerOutlet laptopOutlet = new LaptopAdapter(laptop);
+        PowerOutlet refrigeratorOutlet = new RefrigeratorAdapter(refrigerator);
+        PowerOutlet phoneOutlet = new SmartphoneAdapter(charger);
 
-        laptopAdapter.plugIn();  // Outputs: Laptop is charging...
-        refrigeratorAdapter.plugIn();  // Outputs: Refrigerator is cooling...
-        smartphoneAdapter.plugIn();  // Outputs: Phone is charging...
+        System.out.println("Plugging in devices:");
+        laptopOutlet.plugIn();
+        refrigeratorOutlet.plugIn();
+        phoneOutlet.plugIn();
     }
 }
